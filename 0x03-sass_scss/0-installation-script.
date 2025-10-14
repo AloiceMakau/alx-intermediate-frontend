@@ -1,0 +1,94 @@
+#Steps to install SASS
+🧱 1. Make sure Node.js and npm are installed
+
+Check your versions:
+
+node -v
+npm -v
+
+
+If you get version numbers (like v20.x or 11.x), you’re good.
+If not → download and install from https://nodejs.org
+
+📂 2. Go to your project folder
+
+Navigate into your project (for example, your Airbnb project):
+
+cd C:\Users\Aloice\Desktop\Airbnb
+
+📦 3. Initialize npm (if you haven’t yet)
+
+This creates a package.json file that tracks dependencies:
+
+npm init -y
+
+🪄 4. Install Sass (the modern Dart Sass)
+
+Run:
+
+npm install sass --save-dev
+
+
+🧠 What this does:
+
+Installs the latest version of Dart Sass.
+
+Adds it as a dev dependency in your package.json.
+
+⚙️ 5. Check if Sass installed correctly
+
+Run:
+
+npx sass --version
+
+
+If you see something like:
+
+1.80.0 compiled with dart2js
+
+
+Boom 💥 — Sass is ready to roll.
+
+🎨 6. Create your Sass files
+
+Inside your project, create a folder structure like this:
+
+project/
+├─ src/
+│   └─ styles.scss
+└─ dist/
+    └─ styles.css
+
+
+In styles.scss, add something simple to test:
+
+$main-color: #e63946;
+
+body {
+  background: $main-color;
+  color: white;
+}
+
+🧩 7. Compile Sass to CSS
+
+Now compile it manually:
+
+npx sass src/styles.scss dist/styles.css
+
+
+Or keep it watching for changes:
+
+npx sass src/styles.scss dist/styles.css --watch
+
+
+Every time you save styles.scss, Sass will recompile automatically.
+
+🪞 8. Link the compiled CSS in your HTML
+
+In your <head> tag:
+
+<link rel="stylesheet" href="dist/styles.css">
+
+
+✅ That’s it!
+You’ve installed Sass, configured it, and set up automatic compilation.
